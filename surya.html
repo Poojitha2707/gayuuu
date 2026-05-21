@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For Gayathri 💛</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to bottom, #fff1f5, #ffffff);
+            margin: 0;
+            padding: 0;
+            color: #444;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #d63384;
+        }
+
+        img {
+            width: 50%;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+
+        .message {
+            font-size: 16px;
+            line-height: 1.7;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .song {
+            margin-top: 30px;
+        }
+
+        .song a {
+            text-decoration: none;
+            color: white;
+            background: #ff5c8a;
+            padding: 12px 20px;
+            border-radius: 30px;
+            display: inline-block;
+            font-weight: bold;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-style: italic;
+            color: #666;
+        }
+         /* ❤ FLOATING HEARTS */
+        .heart {
+            position: fixed;
+            bottom: -10px;
+            color: #ff5c8a;
+            font-size: 20px;
+            animation: floatUp 5s linear forwards;
+            opacity: 0.8;
+            z-index: 10;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-600px) scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        /* 💖 POPUP */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.4);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+
+        .popup {
+            background: #fff;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            animation: popupFade 0.6s ease;
+        }
+
+        .popup h2 {
+            color: #ff5c8a;
+            margin-bottom: 10px;
+        }
+
+        .popup p {
+            font-size: 20px;
+            color: #444;
+        }
+
+        @keyframes popupFade {
+            from {
+                transform: scale(0.7);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+     <!-- 💖 POPUP -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup">
+            <h2>Wait....</h2>
+            <p>💖 Love you soo much 💖</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>For My Girl 💛</h1>
+
+        <img src="photog.jpeg" alt="Our Memory">
+
+        <div class="message">
+            <p>
+                Gayathri 💖,
+            </p>
+
+            <p>I never thought someone I met during my PG would become this important to me. 
+                In the beginning, we were just classmates, and honestly, I never expected 
+                that one day you would become such a special part of my life.
+                </p>
+                
+            <p> But slowly, without even realizing it, I got attached to you. 
+                Now my days feel incomplete without talking to you, laughing with you, 
+                or simply being around you. The little moments we share, the random conversations, 
+                the fun, the support, and even the silence between us have become some of my favorite parts of life.
+            </p>
+
+            <p>No matter what happens in life or where our future takes us after PG, 
+                I just want you to know that I’ll always be there for you. 
+            </p>
+            <p>I want us to stay close no matter how busy life becomes, 
+                because losing this bond would honestly hurt me a lot.
+               
+            </p>
+            <p>Thank you for being there and for making my life happier in ways you 
+                probably don’t even realize. You are one of the best things that happened 
+                to me during this phase of my life, and I’ll always be grateful for that.</p>
+            <p>Missss Youuuuu 😭</p>
+            
+            <p>Holding you tightly in my heart,</p>
+            <p>your Friend </p>
+
+        </div>
+
+        <div class="song">
+            <p>🎶 A song that reminds me of you</p>
+            <a href="https://youtu.be/K7fKCyanjOM?si=eHoAgYNYUO2xNurl" target="_blank">
+                Play the Song
+            </a>
+        </div>
+
+        <div class="footer">
+            With endless love,<br>
+            <strong>Poojitha 💛</strong>
+        </div>
+    </div>
+     
+     <script>
+        // Floating hearts
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.innerHTML = "❤";
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.fontSize = Math.random() * 10 + 15 + "px";
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+        setInterval(createHeart, 400);
+
+        // Popup after 5 seconds
+        setTimeout(() => {
+            document.getElementById("popupOverlay").style.display = "flex";
+        }, 5000);
+
+        // Close popup on click
+        document.getElementById("popupOverlay").addEventListener("click", () => {
+            document.getElementById("popupOverlay").style.display = "none";
+        });
+    </script>
+
+</body>
+</html>
+
+
